@@ -22,7 +22,7 @@ get_header();
 				</li>
 
 				<?php if ( $archive_link && $post_type_object ) : ?>
-					<li class="case-study-breadcrumbs__item" aria-hidden="true">/</li>
+					<li class="case-study-breadcrumbs__item" aria-hidden="true">|</li>
 					<li class="case-study-breadcrumbs__item">
 						<a href="<?php echo esc_url( $archive_link ); ?>">
 							<?php echo esc_html( $post_type_object->labels->name ); ?>
@@ -30,7 +30,7 @@ get_header();
 					</li>
 				<?php endif; ?>
 
-				<li class="case-study-breadcrumbs__item" aria-hidden="true">/</li>
+				<li class="case-study-breadcrumbs__item" aria-hidden="true">|</li>
 				<li class="case-study-breadcrumbs__item case-study-breadcrumbs__item--current" aria-current="page">
 					<?php the_title(); ?>
 				</li>
