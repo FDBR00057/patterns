@@ -1,0 +1,745 @@
+@font-face {
+  font-family: 'Le Monde Livre';
+  src: url('/wp-content/uploads/2025/06/LeMondeLivre-Normal.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Le Monde Livre';
+  src: url('/wp-content/uploads/2025/06/LeMondeLivre-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --ink: #0e1117;
+  --paper: #f7f5f0;
+  --paper-2: #f2efe8;
+  --accent: #1a4fd6;
+  --accent-light: #e8effe;
+  --muted: #6b7280;
+  --rule: #ddd9d0;
+  --green: #0f6b4f;
+  --green-light: #e6f4ef;
+  --card-bg: #ffffff;
+  --content-width: 860px;
+  --wide-width: 1100px;
+  --hero-text-width: 720px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --text-xs: clamp(.8rem, .78rem + .12vw, .875rem);
+  --text-sm: clamp(.875rem, .84rem + .2vw, 1rem);
+  --text-base: clamp(1rem, .95rem + .2vw, 1.125rem);
+  --text-md: clamp(1.125rem, 1rem + .6vw, 1.375rem);
+  --text-lg: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
+  --text-xl: clamp(2rem, 1.5rem + 3vw, 3.2rem);
+}
+
+.editor-styles-wrapper,
+.editor-styles-wrapper * {
+  box-sizing: border-box;
+}
+
+.editor-styles-wrapper {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  padding: var(--space-8) var(--space-6) var(--space-12);
+}
+
+.editor-styles-wrapper body {
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+}
+
+.editor-styles-wrapper .is-root-container {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: var(--space-16);
+}
+
+.editor-styles-wrapper .wp-block {
+  max-width: var(--content-width);
+}
+
+.editor-styles-wrapper .wp-block[data-align="wide"] {
+  max-width: var(--wide-width);
+}
+
+.editor-styles-wrapper .wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .wp-block {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .wp-block + .wp-block {
+  margin-top: var(--space-6);
+}
+
+.editor-styles-wrapper p {
+  color: #2d3340;
+  margin: 0 0 var(--space-4);
+  max-width: 72ch;
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-base);
+}
+
+.editor-styles-wrapper p:last-child {
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+  margin: 0 0 var(--space-5) 1.25rem;
+  padding: 0;
+  color: #2d3340;
+}
+
+.editor-styles-wrapper li {
+  margin-bottom: var(--space-2);
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  margin: 0 0 var(--space-4);
+  color: var(--ink);
+  line-height: 1.2;
+  font-family: 'Le Monde Livre', Georgia, serif;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3 {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.editor-styles-wrapper h1 {
+  font-size: var(--text-xl);
+}
+
+.editor-styles-wrapper h2 {
+  font-size: var(--text-lg);
+}
+
+.editor-styles-wrapper h3 {
+  font-size: var(--text-md);
+}
+
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.editor-styles-wrapper a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+.editor-styles-wrapper strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.editor-styles-wrapper em {
+  font-style: italic;
+}
+
+.editor-styles-wrapper blockquote {
+  margin: var(--space-8) 0;
+  padding: var(--space-5) var(--space-6);
+  border-left: 3px solid var(--accent);
+  background: var(--card-bg);
+}
+
+.editor-styles-wrapper blockquote p {
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: var(--text-md);
+  color: var(--ink);
+}
+
+.editor-styles-wrapper hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: var(--space-10) 0;
+}
+
+.editor-styles-wrapper code {
+  background: #f0ede7;
+  border-radius: 4px;
+  padding: 0.15em 0.35em;
+  font-size: 0.92em;
+}
+
+.editor-styles-wrapper pre {
+  background: #171a21;
+  color: #f5f7fb;
+  padding: var(--space-5);
+  border-radius: 8px;
+  overflow: auto;
+  margin: var(--space-6) 0;
+}
+
+.editor-styles-wrapper pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.editor-styles-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  background: var(--card-bg);
+}
+
+.editor-styles-wrapper th {
+  background: var(--ink);
+  color: #fff;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.editor-styles-wrapper td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  color: #2d3340;
+}
+
+.editor-styles-wrapper tbody tr:nth-child(even) td {
+  background: #fcfbf8;
+}
+
+.editor-styles-wrapper figure {
+  margin: var(--space-8) 0;
+}
+
+.editor-styles-wrapper figcaption {
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  text-align: center;
+}
+
+.editor-styles-wrapper .wp-block-image img,
+.editor-styles-wrapper .wp-block-cover,
+.editor-styles-wrapper .wp-block-video video {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.editor-styles-wrapper .wp-block-group,
+.editor-styles-wrapper .wp-block-columns,
+.editor-styles-wrapper .wp-block-column,
+.editor-styles-wrapper .wp-block-table,
+.editor-styles-wrapper figure,
+.editor-styles-wrapper table {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.editor-styles-wrapper .wp-block-columns {
+  gap: var(--space-4);
+}
+
+.editor-styles-wrapper .wp-block-separator {
+  opacity: 1;
+  border-bottom-color: var(--rule);
+}
+
+.editor-styles-wrapper .wp-block-button__link {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.editor-styles-wrapper .wp-block-pullquote {
+  padding: var(--space-8);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+}
+
+.editor-styles-wrapper .wp-block-pullquote blockquote {
+  margin: 0;
+  padding: 0;
+  border-left: 0;
+  background: transparent;
+}
+
+.editor-styles-wrapper .wp-block-quote.is-style-large p,
+.editor-styles-wrapper .wp-block-pullquote p {
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: var(--text-lg);
+  line-height: 1.35;
+}
+
+.editor-styles-wrapper .editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .wp-block-post-title {
+  font-family: 'Le Monde Livre', Georgia, serif;
+  color: var(--ink);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 400;
+  max-width: var(--content-width);
+}
+
+.editor-styles-wrapper .editor-post-title__block {
+  margin-bottom: var(--space-8);
+}
+
+.editor-styles-wrapper .block-editor-block-list__block.is-selected,
+.editor-styles-wrapper .block-editor-block-list__block.is-highlighted {
+  outline-color: rgba(26, 79, 214, 0.35);
+}
+
+.editor-styles-wrapper .wp-block[data-type="core/group"] {
+  border-radius: 4px;
+}
+
+.editor-styles-wrapper .wp-block-table,
+.editor-styles-wrapper .wp-block-columns,
+.editor-styles-wrapper .wp-block-group {
+  position: relative;
+}
+
+.editor-styles-wrapper .wp-block-table:hover,
+.editor-styles-wrapper .wp-block-columns:hover,
+.editor-styles-wrapper .wp-block-group:hover {
+  box-shadow: inset 0 0 0 1px rgba(26, 79, 214, 0.08);
+}
+
+.editor-styles-wrapper .wp-block-spacer {
+  background-image: linear-gradient(to right, rgba(26, 79, 214, 0.12) 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+}
+
+.editor-styles-wrapper .is-root-container > .wp-block-group.alignfull,
+.editor-styles-wrapper .is-root-container > .wp-block-cover.alignfull {
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
+}
+
+.editor-styles-wrapper .wp-block[data-align="full"] {
+  margin-left: calc(-1 * var(--space-6));
+  margin-right: calc(-1 * var(--space-6));
+}
+
+.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter {
+  font-family: 'Le Monde Livre', Georgia, serif;
+}
+
+.editor-styles-wrapper .case-study-single,
+.editor-styles-wrapper .case-study-gutenberg {
+  background: transparent;
+}
+
+.editor-styles-wrapper .cs-hero {
+  background: var(--ink);
+  color: #fff;
+  padding: var(--space-18) var(--space-10) var(--space-16);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.editor-styles-wrapper .cs-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% -10%, #1a4fd620 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 10% 110%, #0f6b4f18 0%, transparent 60%);
+}
+
+.editor-styles-wrapper .cs-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.editor-styles-wrapper .cs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8fa3d0;
+  margin-bottom: var(--space-6);
+}
+
+.editor-styles-wrapper .cs-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #8fa3d0;
+}
+
+.editor-styles-wrapper .cs-hero h1 {
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: var(--text-xl);
+  line-height: 1.15;
+  font-weight: 400;
+  color: #fff;
+  max-width: var(--hero-text-width);
+  margin-bottom: var(--space-8);
+}
+
+.editor-styles-wrapper .cs-hero h1 em {
+  color: #93b4ff;
+}
+
+.editor-styles-wrapper .cs-outcome-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.editor-styles-wrapper .cs-outcome-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  padding: 10px 16px;
+  display: flex;
+  flex: 1 1 180px;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 100%;
+}
+
+.editor-styles-wrapper .cs-outcome-pill .number {
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: clamp(1.25rem, 1.1rem + .8vw, 1.5rem);
+  color: #93b4ff;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.editor-styles-wrapper .cs-outcome-pill p:not(.number) {
+  font-size: var(--text-xs);
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.editor-styles-wrapper .cs-hero-meta {
+  max-width: 100%;
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.editor-styles-wrapper .cs-hero-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+}
+
+.editor-styles-wrapper .cs-hero-meta-grid .wp-block-column {
+  flex: 0 1 auto;
+  margin: 0;
+}
+
+.editor-styles-wrapper .cs-hero-meta-item {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+.editor-styles-wrapper .cs-hero-meta-item strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.editor-styles-wrapper .cs-section {
+  background: transparent;
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.editor-styles-wrapper .cs-section:first-of-type {
+  border-top: 0;
+}
+
+.editor-styles-wrapper .cs-section-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+.editor-styles-wrapper .cs-section h2,
+.editor-styles-wrapper .cs-diff-section h2 {
+  margin-bottom: var(--space-5);
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.editor-styles-wrapper .cs-diff-section {
+  background: var(--ink);
+  color: #fff;
+  padding: var(--space-12) var(--space-8);
+  border-radius: 8px;
+}
+
+.editor-styles-wrapper .cs-diff-section .cs-section-label {
+  color: #8fa3d0;
+}
+
+.editor-styles-wrapper .cs-diff-section h2 {
+  color: #fff;
+}
+
+.editor-styles-wrapper .cs-diff-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: var(--space-5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: #fff;
+}
+
+.editor-styles-wrapper .cs-num {
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: clamp(1.125rem, .95rem + .8vw, 1.5rem);
+  color: currentColor;
+  line-height: 1.2;
+  margin: 0 0 var(--space-8);
+}
+
+.editor-styles-wrapper .cs-diff-card p:not(.cs-num) {
+  color: #fff;
+  font-size: var(--text-xs);
+  margin: 0;
+}
+
+.editor-styles-wrapper .cs-challenge-card {
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: var(--space-4) 18px;
+}
+
+.editor-styles-wrapper .cs-challenge-card p {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.editor-styles-wrapper .cs-solution-card {
+  background: var(--accent-light);
+  border: 1px solid #c5d4f8;
+  border-radius: 6px;
+  padding: var(--space-5);
+}
+
+.editor-styles-wrapper .cs-icon {
+  font-size: clamp(1rem, .95rem + .3vw, 1.125rem);
+  margin-bottom: var(--space-2);
+  line-height: 1;
+}
+
+.editor-styles-wrapper .cs-solution-card h3 {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+.editor-styles-wrapper .cs-solution-card p {
+  font-size: var(--text-xs);
+  color: #4a5568;
+}
+
+.editor-styles-wrapper .cs-outcome-item {
+  background: var(--green-light);
+  border: 1px solid #b7ddd0;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: var(--text-sm);
+  color: #0a4033;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.editor-styles-wrapper .cs-outcome-item::before {
+  content: "→";
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.editor-styles-wrapper .cs-outcome-item p {
+  color: #0a4033;
+  margin: 0;
+}
+
+.editor-styles-wrapper .wp-block-table.is-style-stripes tbody tr:nth-child(odd) td {
+  background: #fcfbf8;
+}
+
+.editor-styles-wrapper .block-library-table-of-contents__item,
+.editor-styles-wrapper .wp-block-navigation-item__content {
+  color: inherit;
+}
+
+.editor-styles-wrapper .case-study-latest {
+  padding: var(--space-14) var(--space-10);
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.editor-styles-wrapper .case-study-latest__eyebrow {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.editor-styles-wrapper .case-study-latest__title {
+  margin: 0 0 var(--space-8);
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.editor-styles-wrapper .case-study-latest__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.editor-styles-wrapper .case-study-latest__card-title {
+  margin: 0 0 var(--space-3);
+  font-family: 'Le Monde Livre', Georgia, serif;
+  font-size: var(--text-md);
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.editor-styles-wrapper .case-study-latest__excerpt {
+  margin: 0 0 var(--space-4);
+  color: var(--muted);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.editor-styles-wrapper .case-study-latest__cta {
+  display: inline-block;
+  color: var(--accent);
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+@media (max-width: 782px) {
+  .editor-styles-wrapper {
+    padding: var(--space-6) var(--space-4) var(--space-10);
+  }
+
+  .editor-styles-wrapper .is-root-container > .wp-block-group.alignfull,
+  .editor-styles-wrapper .is-root-container > .wp-block-cover.alignfull {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+  }
+
+  .editor-styles-wrapper .wp-block[data-align="full"] {
+    margin-left: calc(-1 * var(--space-4));
+    margin-right: calc(-1 * var(--space-4));
+  }
+
+  .editor-styles-wrapper .cs-hero {
+    padding: var(--space-10) var(--space-5);
+  }
+
+  .editor-styles-wrapper .cs-hero-meta {
+    margin-top: var(--space-5);
+    padding-top: var(--space-4);
+  }
+
+  .editor-styles-wrapper .cs-hero-meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .editor-styles-wrapper .cs-outcome-strip {
+    gap: var(--space-2);
+  }
+
+  .editor-styles-wrapper .case-study-latest__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-styles-wrapper table {
+    min-width: 640px;
+  }
+}
